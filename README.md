@@ -1,3 +1,7 @@
+# Steel Store Mock-Up
+
+This project is a proof of concept and **presentation mock-up** for an e-commerce website, demonstrating browsing, filtering, and a streamlined, visually appealing design.
+
 # SteelStoreMockUp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
