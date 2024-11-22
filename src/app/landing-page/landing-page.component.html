@@ -1,9 +1,9 @@
 <mat-toolbar color="primary">
     <span>Steel Store</span>
-  
+    
     <!-- Spacer for centering the menu -->
     <span class="spacer"></span>
-  
+    
     <!-- Navigation Menu -->
     <button mat-button [matMenuTriggerFor]="menu">Menu</button>
     <mat-menu #menu="matMenu">
@@ -17,5 +17,36 @@
   <div class="landing-page-content">
     <h1>Welcome to Steel Store</h1>
     <p>Browse our collection of products.</p>
+    
+    <div class="landing-page-container">
+      <!-- Add your other existing content here, like headers or text -->
+  
+      <!-- Carousel Section -->
+      <div class="carousel-section">
+        <carousel>
+          <ng-template ngxCarouselItem>
+            <img 
+              src="assets/images/steel-sheet-image1.jpg" 
+              alt="Image 1" 
+              (load)="onImageLoad('steel-sheet-image1')"/>
+          </ng-template>
+          <ng-template ngxCarouselItem>
+            <img 
+              src="assets/images/steel-coil-image2.jpg" 
+              alt="Image 2" 
+              (load)="onImageLoad('steel-coil-image2')"/>
+          </ng-template>
+          <ng-template ngxCarouselItem>
+            <img 
+              src="assets/images/steel-tube-image3.jpg" 
+              alt="Image 3" 
+              (load)="onImageLoad('steel-tube-image3')"/>
+          </ng-template>
+        </carousel>
+      </div>
+      
+      <!-- Other content can continue below -->
+    </div>
   </div>
+  
   

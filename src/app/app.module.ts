@@ -21,7 +21,6 @@
 // })
 // export class AppModule { }
 
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +31,8 @@ import { MatButtonModule } from '@angular/material/button'; // For button elemen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Required for Angular Material animations
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
+// Import the CarouselModule from ngx-bootstrap
+import { CarouselModule } from 'ngx-bootstrap/carousel'; // Import CarouselModule
 
 @NgModule({
   declarations: [
@@ -45,9 +46,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     MatToolbarModule,
     MatMenuModule,
     MatButtonModule,
-
+    CarouselModule.forRoot(),  // Add the CarouselModule in imports
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
