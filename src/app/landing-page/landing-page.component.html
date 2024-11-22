@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <span>Steel Store</span>
+  
+    <!-- Spacer for centering the menu -->
+    <span class="spacer"></span>
+  
+    <!-- Navigation Menu -->
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Home</button>
+      <button mat-menu-item>Browse</button>
+      <button mat-menu-item>Contact</button>
+    </mat-menu>
+  </mat-toolbar>
+  
+  <!-- Landing page content -->
+  <div class="landing-page-content">
+    <h1>Welcome to Steel Store</h1>
+    <p>Browse our collection of products.</p>
+  </div>
+  

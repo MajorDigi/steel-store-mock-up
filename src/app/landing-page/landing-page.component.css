@@ -1,0 +1,15 @@
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .landing-page-content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
