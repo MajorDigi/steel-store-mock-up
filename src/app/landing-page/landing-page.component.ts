@@ -18,11 +18,23 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit(): void {
     // You can add additional initialization logic here if needed
+    console.log('LandingPageComponent initialized.');
   }
 
   // Method to handle image load events
+  // onImageLoad(imagePath: string): void {
+  //   console.log(`${imagePath} has been loaded successfully.`);
+  // }
+
   onImageLoad(imagePath: string): void {
-    console.log(`${imagePath} has been loaded successfully.`);
+    console.log(`Image loading started: ${imagePath}`);
+    setTimeout(() => {
+      console.log(`${imagePath} has been loaded successfully.`);
+    }, 2000); // Adjust the timeout as needed
+  }
+
+  onImageError(imagePath: string): void {
+    console.error(`Error loading image: ${imagePath}`);
   }
 
 }

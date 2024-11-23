@@ -18,35 +18,64 @@
     <h1>Welcome to Steel Store</h1>
     <p>Browse our collection of products.</p>
     
-    <div class="landing-page-container">
+    <!-- <div class="landing-page-container"> -->
       <!-- Add your other existing content here, like headers or text -->
   
       <!-- Carousel Section -->
-      <div class="carousel-section">
+      <!-- <div class="carousel-section">
         <carousel>
           <ng-template ngxCarouselItem>
             <img 
-              src="assets/images/steel-sheet-image1.jpg" 
-              alt="Image 1" 
+              src="/src/assets/images/steel-sheet-image1.jpg" 
+              alt="Steel Sheet" 
               (load)="onImageLoad('steel-sheet-image1')"/>
           </ng-template>
           <ng-template ngxCarouselItem>
             <img 
               src="assets/images/steel-coil-image2.jpg" 
-              alt="Image 2" 
+              alt="Steel Coil" 
               (load)="onImageLoad('steel-coil-image2')"/>
           </ng-template>
           <ng-template ngxCarouselItem>
             <img 
               src="assets/images/steel-tube-image3.jpg" 
-              alt="Image 3" 
+              alt="Steel Tube" 
               (load)="onImageLoad('steel-tube-image3')"/>
           </ng-template>
         </carousel>
-      </div>
+      </div> -->
       
       <!-- Other content can continue below -->
-    </div>
+    <!-- </div> -->
+
+    <!-- Test images outside the carousel -->
+<div class="test-image-section">
+  <h2>Testing Images</h2>
+  <img 
+    src="assets/images/steel-sheet-image1.jpg" 
+    alt="steel-sheet-image1" 
+    (load)="onImageLoad('steel-sheet-image1')" 
+    (error)="onImageError('steel-sheet-image1')"
+    style="max-width: 300px; border: 1px solid #ccc; margin: 10px;"
+  />
+
+  <img 
+    src="assets/images/steel-coil-image2.jpg" 
+    alt="steel-coil-image2" 
+    (load)="onImageLoad('steel-coil-image2')" 
+    (error)="onImageError('steel-coil-image2')"
+    style="max-width: 300px; border: 1px solid #ccc; margin: 10px;"
+  />
+
+  <img 
+    src="assets/images/steel-tube-image3.jpg" 
+    alt="steel-tube-image3" 
+    (load)="onImageLoad('steel-tube-image3')" 
+    (error)="onImageError('steel-tube-image3')"
+    style="max-width: 300px; border: 1px solid #ccc; margin: 10px;"
+  />
+</div>
+
   </div>
   
   
