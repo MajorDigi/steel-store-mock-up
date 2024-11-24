@@ -7,34 +7,51 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  // Array of image paths for easier handling
-  imagePaths: string[] = [
-    'assets/images/steel-sheet-image1.jpg',
-    'assets/images/steel-coil-image2.jpg',
-    'assets/images/steel-tube-image3.jpg'
-  ];
-
   constructor() { }
 
   ngOnInit(): void {
-    // You can add additional initialization logic here if needed
     console.log('LandingPageComponent initialized.');
   }
-
-  // Method to handle image load events
-  // onImageLoad(imagePath: string): void {
-  //   console.log(`${imagePath} has been loaded successfully.`);
-  // }
 
   onImageLoad(imagePath: string): void {
     console.log(`Image loading started: ${imagePath}`);
     setTimeout(() => {
       console.log(`${imagePath} has been loaded successfully.`);
-    }, 2000); // Adjust the timeout as needed
+    }, 2000); // Simulate loading delay
   }
 
   onImageError(imagePath: string): void {
     console.error(`Error loading image: ${imagePath}`);
   }
 
+  slides = [
+    {
+      image: 'assets/images/steel-sheet-image1.jpg',
+      alt: 'Steel Sheet',
+      title: 'Steel Sheet',
+      description: 'High-quality steel sheets for all your needs.'
+    },
+    {
+      image: 'assets/images/steel-coil-image2.jpg',
+      alt: 'Steel Coil',
+      title: 'Steel Coil',
+      description: 'Durable and flexible steel coils.'
+    },
+    {
+      image: 'assets/images/steel-tube-image3.jpg',
+      alt: 'Steel Tube',
+      title: 'Steel Tube',
+      description: 'Strong and reliable steel tubes.'
+    }
+  ];
+
+  activeSlide = 0;
+
+  nextSlide(): void {
+    this.activeSlide = (this.activeSlide + 1) % this.slides.length;
+  }
+
+  prevSlide(): void {
+    this.activeSlide = (this.activeSlide - 1 + this.slides.length) % this.slides.length;
+  }
 }

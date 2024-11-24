@@ -30,9 +30,10 @@ import { MatMenuModule } from '@angular/material/menu'; // For menu
 import { MatButtonModule } from '@angular/material/button'; // For button elements
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Required for Angular Material animations
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { MatCardModule } from '@angular/material/card'; // Import MatCardModule
 
 // Import the CarouselModule from ngx-bootstrap
-import { CarouselModule } from 'ngx-bootstrap/carousel'; // Import CarouselModule
+// import { CarouselModule } from 'ngx-bootstrap/carousel'; // Import CarouselModule
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel'; // Import CarouselModul
     MatToolbarModule,
     MatMenuModule,
     MatButtonModule,
-    CarouselModule.forRoot(),  // Add the CarouselModule in imports
+    MatCardModule, // Add MatCardModule here
+    // CarouselModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
