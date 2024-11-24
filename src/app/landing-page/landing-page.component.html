@@ -1,3 +1,4 @@
+<!-- Toolbar with Branding and Menu -->
 <mat-toolbar color="primary">
   <span>Steel Store</span>
   <span class="spacer"></span>
@@ -9,74 +10,78 @@
   </mat-menu>
 </mat-toolbar>
 
+<!-- Landing Page Content Section -->
 <div class="landing-page-content">
+  <!-- Main Heading and Description -->
   <h1>Welcome to Steel Store</h1>
   <p>Browse our collection of products.</p>
 
-  <div class="landing-page-container">
-    <!-- First Carousel Section -->
-    <div class="carousel-section">
-      <div class="carousel-container">
-        <div class="carousel-wrapper"
-             [ngStyle]="{'transform': 'translateX(-' + (activeSlide * 100) + '%)'}">
-          <mat-card *ngFor="let slide of slides; let i = index" 
-                    class="carousel-item"
-                    [class.active]="i === activeSlide">
-            <img [src]="slide.image" [alt]="slide.alt" />
-            <div class="carousel-caption">
-              <h3>{{ slide.title }}</h3>
-              <p>{{ slide.description }}</p>
-            </div>
-          </mat-card>
+  <!-- First Carousel Section (Custom) -->
+  <!-- <div class="carousel-section">
+    <div class="carousel-container">
+      <div class="carousel-wrapper"> -->
+        <!-- Carousel Item Loop (Using Angular for dynamic slide display) -->
+        <!-- <div *ngFor="let slide of slides; let i = index" 
+             class="carousel-item" [class.active]="i === activeSlide">
+          <img [src]="slide.image" [alt]="slide.alt" />
+          <div class="carousel-caption">
+            <h3>{{ slide.title }}</h3>
+            <p>{{ slide.description }}</p>
+          </div>
         </div>
-        <button mat-button class="carousel-navigation" (click)="prevSlide()">&#x3c;</button>
-        <button mat-button class="carousel-navigation" (click)="nextSlide()">&#x3e;</button>
+      </div> -->
+      <!-- Custom Navigation for Previous and Next Slide -->
+      <!-- <button mat-button class="carousel-navigation" (click)="prevSlide()">&#x3c;</button>
+      <button mat-button class="carousel-navigation" (click)="nextSlide()">&#x3e;</button>
+    </div>
+  </div> -->
+
+  <!-- Second Carousel Section (Bootstrap Carousel) -->
+  <div id="bootstrapCarousel" class="carousel slide second-carousel" data-bs-ride="carousel">
+    
+    <!-- Indicators/Dots for Carousel -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#bootstrapCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#bootstrapCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#bootstrapCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Carousel Images -->
+    <div class="carousel-inner">
+      <!-- First Image Slide -->
+      <div class="carousel-item active">
+        <img src="assets/images/steel-sheet-image1.jpg" class="d-block w-100" alt="Steel Sheet">
+        <div class="carousel-caption">
+          <h3>Steel Sheet</h3>
+          <p>High-quality steel sheets for all your needs.</p>
+        </div>
+      </div>
+      <!-- Second Image Slide -->
+      <div class="carousel-item">
+        <img src="assets/images/steel-coil-image2.jpg" class="d-block w-100" alt="Steel Coil">
+        <div class="carousel-caption">
+          <h3>Steel Coil</h3>
+          <p>Durable and flexible steel coils.</p>
+        </div>
+      </div>
+      <!-- Third Image Slide -->
+      <div class="carousel-item">
+        <img src="assets/images/steel-tube-image3.jpg" class="d-block w-100" alt="Steel Tube">
+        <div class="carousel-caption">
+          <h3>Steel Tube</h3>
+          <p>Strong and reliable steel tubes.</p>
+        </div>
       </div>
     </div>
 
-    <!-- Second Carousel Section -->
-    <div id="bootstrapCarousel" class="carousel slide second-carousel" data-bs-ride="carousel">
-      <!-- Indicators/Dots -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#bootstrapCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#bootstrapCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#bootstrapCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-    
-      <!-- Carousel Images -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="assets/images/steel-sheet-image1.jpg" class="d-block w-100" alt="Steel Sheet">
-          <div class="carousel-caption">
-            <h3>Steel Sheet</h3>
-            <p>High-quality steel sheets for all your needs.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="assets/images/steel-coil-image2.jpg" class="d-block w-100" alt="Steel Coil">
-          <div class="carousel-caption">
-            <h3>Steel Coil</h3>
-            <p>Durable and flexible steel coils.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="assets/images/steel-tube-image3.jpg" class="d-block w-100" alt="Steel Tube">
-          <div class="carousel-caption">
-            <h3>Steel Tube</h3>
-            <p>Strong and reliable steel tubes.</p>
-          </div>
-        </div>
-      </div>
-    
-      <!-- Navigation Arrows -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#bootstrapCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#bootstrapCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    
+    <!-- Bootstrap Carousel Navigation Arrows -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#bootstrapCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bootstrapCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 </div>
