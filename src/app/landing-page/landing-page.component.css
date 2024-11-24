@@ -1,3 +1,4 @@
+/* General Toolbar Styling */
 .mat-toolbar {
   display: flex;
   justify-content: space-between;
@@ -5,8 +6,7 @@
   position: relative; /* Ensures the buttons are positioned relative to the toolbar */
 }
 
-
-
+/* Landing Page Content Styling */
 .landing-page-content {
   text-align: center;
   padding: 20px;
@@ -16,6 +16,7 @@
   flex: 1 1 auto;
 }
 
+/* Carousel Container Styling (Applies to Both Carousels) */
 .carousel-container {
   display: flex;
   position: relative;
@@ -27,7 +28,6 @@
 .carousel-wrapper {
   display: flex;
   transition: transform 0.5s ease-in-out;
- 
 }
 
 .carousel-item {
@@ -53,6 +53,7 @@
   padding: 10px;
 }
 
+/* Carousel Navigation Buttons (Shared Style for Both Carousels) */
 .carousel-navigation {
   position: absolute;
   top: 50%;
@@ -80,4 +81,26 @@
   right: 10px; /* Align right button */
 }
 
+/* Additional Styling for the Second Carousel */
+.second-carousel {
+  margin-top: 40px; /* Add some spacing between the first and second carousels */
+  background-color: #f8f9fa; /* Light background for visual distinction */
+  padding: 20px; /* Padding around the second carousel */
+  border-radius: 8px; /* Subtle rounded corners for the second carousel */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for better aesthetics */
+}
 
+.second-carousel h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333; /* Darker color for the heading */
+}
+
+.second-carousel p {
+  font-size: 1em;
+  color: #555; /* Lighter text color for the description */
+}
+.carousel-inner img {
+  height: 300px;
+  object-fit: cover;
+}
