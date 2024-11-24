@@ -49,9 +49,11 @@ export class LandingPageComponent implements OnInit {
 
   nextSlide(): void {
     this.activeSlide = (this.activeSlide + 1) % this.slides.length;
+    console.log('Next Slide:', this.activeSlide); // Debug log
   }
 
   prevSlide(): void {
     this.activeSlide = (this.activeSlide - 1 + this.slides.length) % this.slides.length;
+    console.log('Previous Slide:', this.activeSlide); // Debug log
   }
 }
