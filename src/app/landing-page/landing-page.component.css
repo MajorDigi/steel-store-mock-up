@@ -2,7 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative; /* Ensures the buttons are positioned relative to the toolbar */
 }
+
+
 
 .landing-page-content {
   text-align: center;
@@ -35,7 +38,7 @@
 }
 
 .carousel-item img {
-  width: 100%;
+  width: 80%;
   height: auto;
   object-fit: cover;
 }
@@ -50,21 +53,31 @@
   padding: 10px;
 }
 
-button {
+.carousel-navigation {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  cursor: pointer;
-  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  color: white; /* White text/icons for contrast */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor for buttons */
+  z-index: 1000; /* Ensure buttons are on top of carousel */
+  padding: 10px; /* Add some padding for better clickability */
+  border-radius: 50%; /* Make the buttons circular */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for better visibility */
+  transition: background 0.3s ease; /* Smooth background transition on hover */
 }
 
-button:first-child {
-  left: 10px;
+.carousel-navigation:hover {
+  background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
 }
 
-button:last-child {
-  right: 10px;
+.carousel-navigation:first-child {
+  left: 10px; /* Align left button */
 }
+
+.carousel-navigation:last-child {
+  right: 10px; /* Align right button */
+}
+
+
