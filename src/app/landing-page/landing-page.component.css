@@ -55,6 +55,7 @@
   left: 50%;
   transform: translateX(-50%); /* Center align the caption */
   color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
   background: transparent(0, 0, 0, 0.5); /* Semi-transparent background */
   padding: 10px;
 }
