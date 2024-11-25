@@ -4,12 +4,14 @@
   justify-content: space-between;
   align-items: center;
   position: relative; /* Ensures the buttons are positioned relative to the toolbar */
+  background-color: #608BC1;
 }
 
 /* Landing Page Content Styling */
 .landing-page-content {
   text-align: center;
   padding: 20px;
+  background-color: #CBDCEB;
 }
 
 .spacer {
@@ -53,7 +55,7 @@
   left: 50%;
   transform: translateX(-50%); /* Center align the caption */
   color: #fff;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background: transparent(0, 0, 0, 0.5); /* Semi-transparent background */
   padding: 10px;
 }
 
@@ -157,15 +159,15 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for better aesthetics */
 }
 
-.second-carousel h2 {
+/* .second-carousel h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
-  color: #333; /* Darker color for the heading */
-}
+  color: #333; 
+} */
 
 .second-carousel p {
   font-size: 1em;
-  color: #555; /* Lighter text color for the description */
+  color: white; /* Lighter text color for the description */
 }
 
 /* Bootstrap Carousel Specific Styles */
@@ -173,3 +175,46 @@
   height: 300px; /* Consistent height for images in Bootstrap carousel */
   object-fit: cover; /* Ensures the image covers the space without distortion */
 }
+/* Styling for the Website Information Container */
+.website-info-container {
+  background-color: #E4E0E1; /* Light blue background color */
+  padding: 40px 20px; /* Padding for spacing */
+  margin-top: 40px; /* Space between carousel and info section */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Styling for the Website Information Section */
+.website-info {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto; /* Center align the content */
+}
+
+.website-info h2 {
+  font-size: 2em;
+  color: #333; /* Dark color for the heading */
+  margin-bottom: 80px;
+}
+
+.website-info p {
+  font-size: 1.1em;
+  color: #555; /* Lighter color for paragraph text */
+  line-height: 1.6;
+  margin-bottom: 20px; /* Adds space at the bottom of the text */
+}
+
+/* Styling for the Footer Section */
+
+/* Footer Styling */
+.footer {
+  color: black;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 0; /* Ensure no space between footer and website container */
+  background-color: #295F98; /* Remove the default background color */
+}
+
+
